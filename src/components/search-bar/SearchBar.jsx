@@ -1,8 +1,9 @@
 import React from 'react';
+import './search.scss';
 
 const SearchBar = props => {
   return (
-    <section>
+    <div className='search'>
       <form onSubmit={e => props.submitHandler(e)}>
         <input
           type='text'
@@ -12,7 +13,7 @@ const SearchBar = props => {
         />
         <button type='submit'> Submit </button>
       </form>
-    </section>
+    </div>
   );
 };
 

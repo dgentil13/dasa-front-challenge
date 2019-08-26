@@ -1,0 +1,20 @@
+$primaryColor: rgba(255, 224, 87, 0.801);
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: $primaryColor;
+  a {
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: black;
+  }
+}
+
+.logo {
+  h4 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+  }
+}

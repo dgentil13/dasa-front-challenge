@@ -1,15 +1,19 @@
 import React from 'react';
+import './navbar.scss';
 
-const Card = ({ repo }) => {
+const Navbar = ({ repo }) => {
   return (
     <nav>
-      <p>logo</p>
-      <ul>
+      <div className='logo'>
+        <h4> GitHub Search </h4>
+      </div>
+      <a href='https://github.com/'> Official GitHub </a>
+      {/* <ul>
         <li>teste</li>
         <li>teste 2</li>
-      </ul>
+      </ul> */}
     </nav>
   );
 };
 
-export default Card;
+export default Navbar;
