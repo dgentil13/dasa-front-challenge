@@ -7,6 +7,7 @@ const Card = ({ repo }) => {
         name: {repo.name}
         last updated: {repo.updated_at}
         stars: {repo.stargazers_count}
+        see more: {repo.html_url}
       </p>
     </div>
   );

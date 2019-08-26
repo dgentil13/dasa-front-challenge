@@ -7,6 +7,7 @@ import Card from '../user-info/Card';
 const Home = () => {
   const [user, setUser] = useState('');
   const [query, setQuery] = useState('');
+  const [error, setError] = useState(false);
 
   const submitHandler = e => {
     e.preventDefault();
@@ -14,10 +15,14 @@ const Home = () => {
       .get(`https://api.github.com/users/${query}/repos`)
       .then(res => {
         console.log(res);
+        setError(false);
         setUser(res.data);
         setQuery('');
       })
-      .catch(err => console.log(err));
+      .catch(err => {
+        setError(true);
+        setUser('');
+      });
   };
 
   const changeHandler = e => {
@@ -35,12 +40,14 @@ const Home = () => {
         />
       </header>
       <section>
+        {user && <p>Check out {user[0].owner.login}'s Repos</p>}
         {user.length !== 0
-          ? user &&
-            user.map((elem, idx) => {
+          ? user.map((elem, idx) => {
               return <Card key={idx} repo={elem} />;
             })
-          : user && <p> not existing</p>}
+          : user && <p> This user has no repos</p>}
+
+        {error && <p> error </p>}
       </section>
     </Fragment>
   );
