@@ -1,4 +1,4 @@
-$primaryColor: rgba(255, 224, 87, 0.801);
+$primaryColor: #fde274;
 
 nav {
   display: flex;
@@ -16,5 +16,13 @@ nav {
   h4 {
     text-transform: uppercase;
     letter-spacing: 5px;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    a {
+      display: none;
+    }
   }
 }
