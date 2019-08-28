@@ -5,15 +5,12 @@ import './search.scss';
 const SearchBar = props => {
   return (
     <div className='search'>
-      <form
-        onSubmit={e => props.submitHandler(e)}
-        className={`${props.changeClass}`}
-      >
+      <form onSubmit={props.submitHandler} className={`${props.changeClass}`}>
         <input
           type='text'
           placeholder='Search for a GitHub user!'
           value={props.query}
-          onChange={e => props.changeHandler(e)}
+          onChange={props.changeHandler}
           onClick={props.clickHandler}
         />
         <button type='submit'>
@@ -27,6 +24,9 @@ const SearchBar = props => {
 SearchBar.propTypes = {
   changeClass: PropTypes.string,
   query: PropTypes.string,
+  submitHandler: PropTypes.func.isRequired,
+  changeHandler: PropTypes.func.isRequired,
+  clickHandler: PropTypes.func.isRequired,
 };
 
 export default SearchBar;
