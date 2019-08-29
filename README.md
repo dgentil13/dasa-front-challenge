@@ -1,8 +1,3 @@
----
-title: 'ReadMe'
-disqus: hackmd
----
-
 Dasa Front-End Test
 ===
 
