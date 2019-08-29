@@ -1,11 +1,13 @@
+@import '../../styles/variables.scss';
+
 footer {
-  background-color: rgba(42, 43, 44, 0.918);
+  @include flexCenter(space-around);
+  background-color: $backgroundFooter;
   position: fixed;
   bottom: 0;
   width: 100%;
   color: white;
-  display: flex;
-  justify-content: space-around;
+
   flex-wrap: wrap;
   p {
     font-size: 0.8rem;

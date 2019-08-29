@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './card.scss';
 
 const Card = ({ repo }) => {
   // Formats numbers above 1k to look shorter

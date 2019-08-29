@@ -1,11 +1,11 @@
+@import '../../styles/variables.scss';
+
 .header {
-  display: flex;
-  justify-content: space-around;
+  @include flexCenter(space-around);
   flex-wrap: wrap;
-  align-items: center;
   height: auto;
   padding: 4rem 1rem 0px 1rem;
-  background-color: rgba(88, 91, 94, 0.055);
+  background-color: $backgroundHeader;
 
   img {
     height: 25vw;
@@ -13,10 +13,8 @@
 }
 
 .search-side {
-  display: flex;
+  @include flexCenter(center);
   flex-direction: column;
-  align-items: center;
-
   h4 {
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -26,10 +24,8 @@
 }
 
 .main-info {
-  display: flex;
+  @include flexCenter(center);
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   padding-top: 2rem;
   padding-bottom: 4rem;
 

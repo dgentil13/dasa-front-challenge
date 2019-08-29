@@ -1,5 +1,4 @@
 import React from 'react';
-import './footer.scss';
 
 const Footer = () => {
   return (
@@ -9,9 +8,7 @@ const Footer = () => {
       </div>
 
       <div className='challenge'>
-        <div>
-          <p> Dasa Challenge - 2019</p>
-        </div>
+        <p> Dasa Challenge - 2019</p>
       </div>
     </footer>
   );

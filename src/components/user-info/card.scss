@@ -1,14 +1,12 @@
-$primaryColor: #d5d1d5;
+@import '../../styles/variables.scss';
 
 .card {
+  @include flexCenter(space-between);
   height: auto;
   width: 70vh;
   padding: 15px;
   margin-bottom: 2rem;
-  display: flex;
-  justify-content: space-between;
-  top: 0px;
-  border: 1px solid $primaryColor;
+  border: 1px solid $borderColorCard;
 
   &:hover {
     transition: all 0.2s ease-out;
@@ -33,9 +31,7 @@ $primaryColor: #d5d1d5;
 .stars {
   height: 4rem;
   width: 4rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flexCenter(center);
   font-weight: 600;
   background-image: url(/images/star-solid.svg);
   background-repeat: no-repeat;

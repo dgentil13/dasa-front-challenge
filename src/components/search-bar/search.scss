@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .search {
   padding: 1rem;
 
@@ -36,6 +38,7 @@
     }
   }
 }
+
 .clicked-search {
   input {
     border: none;
@@ -44,7 +47,7 @@
     height: 7vh;
     width: 40vh;
     font-size: 1.4rem;
-    background-color: #5975c9;
+    background-color: $backgroundInput;
     color: white;
 
     &::placeholder {
@@ -59,9 +62,9 @@
     background-color: white;
     border: none;
     border-radius: 0px 100px 100px 0px;
-    background-color: #5975c9;
-
+    background-color: $backgroundInput;
     cursor: pointer;
+
     img {
       height: 30px;
       padding-right: 5px;

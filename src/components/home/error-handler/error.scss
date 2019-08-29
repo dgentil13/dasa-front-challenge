@@ -1,9 +1,7 @@
 .error {
-  padding: 3rem 3rem 7rem 3rem;
-  display: flex;
-  align-items: center;
+  @include flexCenter(center);
   flex-wrap: wrap;
-  justify-content: center;
+  padding: 3rem 3rem 7rem 3rem;
 
   img {
     height: 40vh;
@@ -12,17 +10,15 @@
   p {
     font-size: 1.5em;
     font-weight: 600;
-    text-transform: uppercase;
     width: 30vw;
     text-align: center;
+    text-transform: uppercase;
   }
 }
 
 .not-found {
   padding: 3rem 3rem 7rem 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flexCenter(center);
   flex-wrap: wrap;
 
   img {
@@ -32,9 +28,9 @@
   p {
     font-size: 1.5rem;
     font-weight: 600;
-    text-transform: uppercase;
     width: 50vh;
     text-align: center;
+    text-transform: uppercase;
   }
 }
 
@@ -51,8 +47,8 @@
     p {
       font-size: 1rem;
       font-weight: 600;
-      text-transform: uppercase;
       width: 30vh;
+      text-transform: uppercase;
     }
   }
 

@@ -1,6 +1,5 @@
 import React, { useState, Fragment } from 'react';
 import axios from 'axios';
-import './home.scss';
 import SearchBar from '../search-bar/SearchBar';
 import Navbar from '../navbar/Navbar';
 import Footer from '../footer/Footer';

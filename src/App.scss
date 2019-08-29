@@ -1,6 +1,22 @@
-html {
-  padding: 0;
+body {
   margin: 0;
+  padding: 0;
   list-style: none;
   border: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
 }
+
+@mixin flexCenter($justify) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+}
+
+@import './components/navbar/navbar.scss';
+@import './components/home/home.scss';
+@import './components/home/error-handler/error.scss';
+@import './components/search-bar/search.scss';
+@import './components/user-info/card.scss';
+@import './components/footer/footer.scss';
