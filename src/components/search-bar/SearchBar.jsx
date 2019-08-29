@@ -1,19 +1,32 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import './search.scss';
 
 const SearchBar = props => {
   return (
-    <section>
-      <form onSubmit={e => props.submitHandler(e)}>
+    <div className='search'>
+      <form onSubmit={props.submitHandler} className={`${props.changeClass}`}>
         <input
           type='text'
           placeholder='Search for a GitHub user!'
           value={props.query}
-          onChange={e => props.changeHandler(e)}
+          onChange={props.changeHandler}
+          onClick={props.clickHandler}
         />
-        <button type='submit'> Submit </button>
+        <button type='submit'>
+          <img src='./images/search-solid.svg' alt='magnifying glass' />
+        </button>
       </form>
-    </section>
+    </div>
   );
+};
+
+SearchBar.propTypes = {
+  changeClass: PropTypes.string,
+  query: PropTypes.string,
+  submitHandler: PropTypes.func.isRequired,
+  changeHandler: PropTypes.func.isRequired,
+  clickHandler: PropTypes.func.isRequired,
 };
 
 export default SearchBar;
