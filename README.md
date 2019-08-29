@@ -32,14 +32,14 @@ npm test
 ```
 
 ## Technologies Used
-JavaScript
-React (with hooks)
-HTML
-Sass
-Axios
-PropTypes
-Jest
-Enzyme
-Docker
-Heroku
+* JavaScript
+* React (with hooks)
+* HTML
+* Sass
+* Axios
+* PropTypes
+* Jest
+* Enzyme
+* Docker
+* Heroku
 
