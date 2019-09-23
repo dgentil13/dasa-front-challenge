@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 const Card = ({ repo }) => {
   // Formats numbers above 1k to look shorter
   const numFormat = num => {
-    return Math.abs(num) > 999
-      ? Math.sign(num) * (Math.abs(num) / 1000).toFixed(1) + 'k'
-      : Math.sign(num) * Math.abs(num);
+    return num > 999
+      ? (num / 1000).toFixed(1) + 'k'
+      : num;
   };
 
   return (
