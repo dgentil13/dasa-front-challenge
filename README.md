@@ -10,27 +10,26 @@ https://dasa-github.herokuapp.com/
 - Get a list of all repos from a GitHub user (using [GitHub](https://developer.github.com/v3/) API).
 
 
+
 ## Instructions
 
 To run this project:
 
 1. Download this repository
-2. Using the terminal, inside the project folder, run **npm i** to install all dependencies.
+2. Using the terminal, inside the project folder, build the container using the following command:
 
 ```
-npm i
-```
-3. Still inside the project folder, run **npm start** to build the project.
-
-```
-npm start
-```
-* For testing, run **npm test**
-
-```
-npm test
+docker build -t dasa-front-challenge .
 ```
 
+3. Then run **docker run** to run the container, using the following command:
+
+```
+ docker run -p 3000:3000 -d dasa-front-challenge
+
+```
+
+- This container will run in port 3000: http://localhost:3000/ !
 ## Technologies Used
 * JavaScript
 * React (with hooks)
